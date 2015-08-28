@@ -1,0 +1,59 @@
++requirements_debian_update_system:2> __rvm_try_sudo apt-get --quiet --yes update
++__rvm_try_sudo:2> typeset -a command_to_run
++__rvm_try_sudo:3> typeset sudo_path sbin_path missing_paths
++__rvm_try_sudo:4> command_to_run=( apt-get --quiet --yes update ) 
++__rvm_try_sudo:5> ((  UID == 0  ))
++__rvm_try_sudo:6> case 4 (0)
++__rvm_try_sudo:6> case 4 (1)
++__rvm_try_sudo:6> case 4 (2)
++__rvm_try_sudo:6> case 4 (*)
++__rvm_try_sudo:21> is_a_function __rvm_sudo
++is_a_function:2> typeset -f __rvm_sudo
++__rvm_try_sudo:23> missing_paths='' 
++__rvm_try_sudo:24> sbin_path=/sbin
++__rvm_try_sudo:26> [[ -d /sbin ]]
++__rvm_try_sudo:26> [[ :/home/nitrous/bin:/usr/local/bin:.bundle/binstubs:/usr/local/opt/rbenv/shims:/usr/local/opt/rbenv/bin:/usr/local/opt/nvm/versions/node/v0.12.5/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/home/nitrous/.rvm/bin: != *:/sbin:* ]]
++__rvm_try_sudo:24> sbin_path=/usr/sbin
++__rvm_try_sudo:26> [[ -d /usr/sbin ]]
++__rvm_try_sudo:26> [[ :/home/nitrous/bin:/usr/local/bin:.bundle/binstubs:/usr/local/opt/rbenv/shims:/usr/local/opt/rbenv/bin:/usr/local/opt/nvm/versions/node/v0.12.5/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/home/nitrous/.rvm/bin: != *:/usr/sbin:* ]]
++__rvm_try_sudo:24> sbin_path=/usr/local/sbin
++__rvm_try_sudo:26> [[ -d /usr/local/sbin ]]
++__rvm_try_sudo:26> [[ :/home/nitrous/bin:/usr/local/bin:.bundle/binstubs:/usr/local/opt/rbenv/shims:/usr/local/opt/rbenv/bin:/usr/local/opt/nvm/versions/node/v0.12.5/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/home/nitrous/.rvm/bin: != *:/usr/local/sbin:* ]]
++__rvm_try_sudo:30> [[ -n '' ]]
++__rvm_try_sudo:33> command_to_run=( __rvm_sudo -p '%p password required for '\''apt-get --quiet --yes update'\'': ' apt-get --quiet --yes update ) 
++__rvm_try_sudo:40> __rvm_sudo -p '%p password required for '\''apt-get --quiet --yes update'\'': ' apt-get --quiet --yes update
++__rvm_sudo:2> sudo -p '%p password required for '\''apt-get --quiet --yes update'\'': ' apt-get --quiet --yes update
+Ign http://mirror.nitrous.io trusty InRelease
+Ign http://mirror.nitrous.io trusty-updates InRelease
+Hit http://mirror.nitrous.io trusty Release.gpg
+Get:1 http://mirror.nitrous.io trusty-updates Release.gpg [933 B]
+Hit http://mirror.nitrous.io trusty Release
+Ign http://security.ubuntu.com trusty-security InRelease
+Get:2 http://mirror.nitrous.io trusty-updates Release [63.5 kB]
+Hit http://mirror.nitrous.io trusty/main Sources
+Hit http://mirror.nitrous.io trusty/restricted Sources
+Hit http://mirror.nitrous.io trusty/universe Sources
+Hit http://mirror.nitrous.io trusty/main amd64 Packages
+Hit http://mirror.nitrous.io trusty/restricted amd64 Packages
+Hit http://mirror.nitrous.io trusty/universe amd64 Packages
+Get:3 http://security.ubuntu.com trusty-security Release.gpg [933 B]
+Get:4 http://apt.postgresql.org trusty-pgdg InRelease [30.2 kB]
+Ign http://toolbelt.heroku.com ./ InRelease
+Get:5 http://mirror.nitrous.io trusty-updates/main Sources [289 kB]
+Get:6 http://security.ubuntu.com trusty-security Release [63.5 kB]
+Get:7 http://mirror.nitrous.io trusty-updates/restricted Sources [4,521 B]
+Get:8 http://mirror.nitrous.io trusty-updates/universe Sources [168 kB]
+Get:9 http://toolbelt.heroku.com ./ Release.gpg [473 B]
+Get:10 http://mirror.nitrous.io trusty-updates/main amd64 Packages [767 kB]
+Get:11 http://apt.postgresql.org trusty-pgdg/main amd64 Packages [58.3 kB]
+Get:12 http://toolbelt.heroku.com ./ Release [1,609 B]
+Get:13 http://mirror.nitrous.io trusty-updates/restricted amd64 Packages [22.7 kB]
+Get:14 http://mirror.nitrous.io trusty-updates/universe amd64 Packages [402 kB]
+Get:15 http://toolbelt.heroku.com ./ Packages [714 B]
+Get:16 http://security.ubuntu.com trusty-security/universe Sources [34.0 kB]
+Get:17 http://security.ubuntu.com trusty-security/multiverse Sources [2,169 B]
+Get:18 http://security.ubuntu.com trusty-security/universe amd64 Packages [148 kB]
+Get:19 http://security.ubuntu.com trusty-security/multiverse amd64 Packages [3,528 B]
+Fetched 2,061 kB in 2s (837 kB/s)
+Reading package lists...
+W: Size of file /var/lib/apt/lists/toolbelt.heroku.com_ubuntu_._Packages.gz is not what the server reported 714 1061

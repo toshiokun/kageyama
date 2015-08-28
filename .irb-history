@@ -1,0 +1,100 @@
+a.push(6)
+a << 7
+a << "foo" << "bar"
+a.join
+a.join(',')
+0..9
+0..9.to_a
+(0..9).to_a
+a = %w[foo bar baz quux]
+a[0..2]
+a
+a = (0..9).to_a
+a[2..(a
+a[2..(a.length)-1]
+]
+a[2..(a.;length-1)]
+a[2..(a.length-1)]
+a[2..-1]
+('a'..'e').to_a
+(1..5).each { |i| puts 2*i}
+(1..5).each do |i|
+puts 2 * i
+(1..5).each do |number|
+puts 2 * number
+puts '--'
+user["last_name"] = Hartl
+user["first_name]
+user["first_name"]
+[]
+ebd
+user = {}
+user["first_name"] = "Michael"
+user["last_name"] = "Hartl"
+user = {"first_name" => "Michael", "last_name" => "Hartl"}
+user
+"
+vfsd
+sdv
+sv
+sd
+fe
+sw
+f
+er
+fwe
+"name".split(")
+"name".split
+"name".split('')
+:name.split('')
+user = {:name => "Michael Hartl", :email => "michael@example.com"}
+user[:name]
+params = {}
+params[:user] = {name: "Michael Hartl", email: "mhartl@example.com"}
+params
+params[:user][:email]
+flash.each do |key. value|
+flash = {success: "It worked!", error: "It failed."}
+flash.each do |key, value|
+puts "Key #{key.inspect} has value #{value.inspect}"
+puts (1..5).to_a
+puts (1..5).to_a.inspect
+puts :name, :name.inspect
+puts "It worked!", "It worked!".inspect
+p :name]
+p :name
+class Word
+def palindrome?(string)
+string == string.reverse
+w = Word.new
+w.palindrome?
+w.palindrome?("foobar")
+w.palindrome?("level")
+class Word < String
+s = Word.new("level")
+s.palindrome?
+s.length
+s]
+s
+s.class
+s.class.superclass
+s.class.superclass.sperclass
+s.class.superclass.superclass
+class String
+def palindrome?
+self == self.reverse
+end
+"deified".palindrome?
+"".blank?
+"    ".empty?
+"    ".blank?
+nil.blank?
+require '.example_user'
+require './example_user'
+example = User.new
+example.name
+example.name = "Example User"
+example.email = "user@example.com"
+example.formatted_email
+rm example_user.rb
+exit

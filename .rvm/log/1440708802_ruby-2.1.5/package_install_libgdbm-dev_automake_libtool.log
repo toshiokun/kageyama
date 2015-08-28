@@ -1,0 +1,64 @@
++requirements_debian_libs_install:2> __rvm_try_sudo apt-get --no-install-recommends --yes install libgdbm-dev automake libtool
++__rvm_try_sudo:2> typeset -a command_to_run
++__rvm_try_sudo:3> typeset sudo_path sbin_path missing_paths
++__rvm_try_sudo:4> command_to_run=( apt-get --no-install-recommends --yes install libgdbm-dev automake libtool ) 
++__rvm_try_sudo:5> ((  UID == 0  ))
++__rvm_try_sudo:6> case 4 (0)
++__rvm_try_sudo:6> case 4 (1)
++__rvm_try_sudo:6> case 4 (2)
++__rvm_try_sudo:6> case 4 (*)
++__rvm_try_sudo:21> is_a_function __rvm_sudo
++is_a_function:2> typeset -f __rvm_sudo
++__rvm_try_sudo:23> missing_paths='' 
++__rvm_try_sudo:24> sbin_path=/sbin
++__rvm_try_sudo:26> [[ -d /sbin ]]
++__rvm_try_sudo:26> [[ :/home/nitrous/bin:/usr/local/bin:.bundle/binstubs:/usr/local/opt/rbenv/shims:/usr/local/opt/rbenv/bin:/usr/local/opt/nvm/versions/node/v0.12.5/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/home/nitrous/.rvm/bin: != *:/sbin:* ]]
++__rvm_try_sudo:24> sbin_path=/usr/sbin
++__rvm_try_sudo:26> [[ -d /usr/sbin ]]
++__rvm_try_sudo:26> [[ :/home/nitrous/bin:/usr/local/bin:.bundle/binstubs:/usr/local/opt/rbenv/shims:/usr/local/opt/rbenv/bin:/usr/local/opt/nvm/versions/node/v0.12.5/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/home/nitrous/.rvm/bin: != *:/usr/sbin:* ]]
++__rvm_try_sudo:24> sbin_path=/usr/local/sbin
++__rvm_try_sudo:26> [[ -d /usr/local/sbin ]]
++__rvm_try_sudo:26> [[ :/home/nitrous/bin:/usr/local/bin:.bundle/binstubs:/usr/local/opt/rbenv/shims:/usr/local/opt/rbenv/bin:/usr/local/opt/nvm/versions/node/v0.12.5/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/home/nitrous/.rvm/bin: != *:/usr/local/sbin:* ]]
++__rvm_try_sudo:30> [[ -n '' ]]
++__rvm_try_sudo:33> command_to_run=( __rvm_sudo -p '%p password required for '\''apt-get --no-install-recommends --yes install libgdbm-dev automake libtool'\'': ' apt-get --no-install-recommends --yes install libgdbm-dev automake libtool ) 
++__rvm_try_sudo:40> __rvm_sudo -p '%p password required for '\''apt-get --no-install-recommends --yes install libgdbm-dev automake libtool'\'': ' apt-get --no-install-recommends --yes install libgdbm-dev automake libtool
++__rvm_sudo:2> sudo -p '%p password required for '\''apt-get --no-install-recommends --yes install libgdbm-dev automake libtool'\'': ' apt-get --no-install-recommends --yes install libgdbm-dev automake libtool
+Reading package lists...
+Building dependency tree...
+Reading state information...
+The following extra packages will be installed:
+  autotools-dev
+Suggested packages:
+  libtool-doc automaken gfortran fortran95-compiler gcj-jdk
+The following NEW packages will be installed:
+  automake autotools-dev libgdbm-dev libtool
+0 upgraded, 4 newly installed, 0 to remove and 48 not upgraded.
+Need to get 768 kB of archives.
+After this operation, 3,322 kB of additional disk space will be used.
+Get:1 http://mirror.nitrous.io/ubuntu/ trusty/main autotools-dev all 20130810.1 [44.3 kB]
+Get:2 http://mirror.nitrous.io/ubuntu/ trusty/main automake all 1:1.14.1-2ubuntu1 [510 kB]
+Get:3 http://mirror.nitrous.io/ubuntu/ trusty/main libgdbm-dev amd64 1.8.3-12build1 [24.9 kB]
+Get:4 http://mirror.nitrous.io/ubuntu/ trusty/main libtool amd64 2.4.2-1.7ubuntu1 [188 kB]
+debconf: unable to initialize frontend: Dialog
+debconf: (Dialog frontend requires a screen at least 13 lines tall and 31 columns wide.)
+debconf: falling back to frontend: Readline
+Fetched 768 kB in 0s (1,926 kB/s)
+Selecting previously unselected package autotools-dev.
+(Reading database ... 37673 files and directories currently installed.)
+Preparing to unpack .../autotools-dev_20130810.1_all.deb ...
+Unpacking autotools-dev (20130810.1) ...
+Selecting previously unselected package automake.
+Preparing to unpack .../automake_1%3a1.14.1-2ubuntu1_all.deb ...
+Unpacking automake (1:1.14.1-2ubuntu1) ...
+Selecting previously unselected package libgdbm-dev.
+Preparing to unpack .../libgdbm-dev_1.8.3-12build1_amd64.deb ...
+Unpacking libgdbm-dev (1.8.3-12build1) ...
+Selecting previously unselected package libtool.
+Preparing to unpack .../libtool_2.4.2-1.7ubuntu1_amd64.deb ...
+Unpacking libtool (2.4.2-1.7ubuntu1) ...
+Processing triggers for man-db (2.6.7.1-1ubuntu1) ...
+Setting up autotools-dev (20130810.1) ...
+Setting up automake (1:1.14.1-2ubuntu1) ...
+update-alternatives: using /usr/bin/automake-1.14 to provide /usr/bin/automake (automake) in auto mode
+Setting up libgdbm-dev (1.8.3-12build1) ...
+Setting up libtool (2.4.2-1.7ubuntu1) ...
